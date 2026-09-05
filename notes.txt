@@ -1,4 +1,1 @@
-Hello Git
-I am learning Git
-Git tracks my changes
-This was added on the feature branch
+Hello from feature
