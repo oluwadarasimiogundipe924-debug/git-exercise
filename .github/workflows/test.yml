@@ -1,0 +1,29 @@
+name: Cheat Sheet Practice
+
+on: push
+
+jobs:
+  practice:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: A shell command
+        run: echo "hi"
+
+      - name: A multi-line command
+        run: |
+          echo "line one"
+          echo "line two"
+
+      - name: A pre-built action
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Show working directory
+        run: pwd
+
+      - name: Show files
+        run: ls -la
