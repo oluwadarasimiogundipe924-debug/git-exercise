@@ -8,3 +8,24 @@ jobs:
     steps:
       - name: Print a greeting
         run: echo "Hello from the robot!"
+
+name: Test Project
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get my code
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run tests
+        run: npm test
+
